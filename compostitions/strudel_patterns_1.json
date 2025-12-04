@@ -58,5 +58,23 @@
         "created_at": 1764594026404,
         "id": "EwVIw9ORL18w",
         "collection": "user"
+    },
+    "5tctwWkR0IXw": {
+        "code": "/*\n  @title   PK 3\n  @by      Ido\n  @album   None\n  @license LGPL\n  @url     https://www.tiktok.com/@puddinggorrila\n*/\n\nsetcpm(180/4)\n\n$chanel_1: stack(\n  note(\"D5  D5  F5  D5   A#4  A4  G4  F4\"),\n  note(`\n    D5  D5  F5  D5   A#4  A4  G4  A#4\n    A4  A4  C5  A4   F4   E4  D4  C4\n  `).slow(2),\n  note(\"A4  A4  C5  A4   F4   E4  D4  F4\")\n).scale(\"D:minor\").gain(.7)._punchcard()\n\n$chanel_2: stack(\n  note(`\n    D2  D2  D2  D2   A#1  A#1 A#1 A#1\n    A2  A2  A2  A2   F2   F2  F2  F2\n    G2  G2  G2  G2   D2   D2  D2  D2\n    A#2 A#2 A#2 A#2  F2   F2  F2  F2\n  `).slow(4)\n).scale(\"D:minor\")._punchcard()",
+        "created_at": 1764871826842,
+        "id": "5tctwWkR0IXw",
+        "collection": "user"
+    },
+    "UyJ1jgjoczww": {
+        "code": "/*\n  @title   PK 4\n  @by      Ido\n  @album   None\n  @license LGPL\n  @url     https://www.tiktok.com/@puddinggorrila\n*/\nsetcpm(180/4)\n\n$chanel_1: stack(\n  note(`\n    F5   F5   F5   F5    Eb5  Eb5  Eb5  Eb5\n    Db5  Db5  Db5  Db5   C5   C5   C5   C5\n    B4   B4   B4   B4    A#4  A#4  A#4  A#4\n  `).slow(3)\n).scale(\"D:minor\").gain(.5)\n\n$chanel_2: stack(\n  note(`\n    F1  -  C2  -   F1  -  C2  -\n    A#1 -  F2  -   A#1 -  F2  -\n    Db2 -  Ab2 -   Db2 -  Ab2 -\n    C2  -  G2  -   C2  -  G2  -\n  `).slow(4)\n)",
+        "created_at": 1764872747171,
+        "id": "UyJ1jgjoczww",
+        "collection": "user"
+    },
+    "VYwm49jZLLCa": {
+        "code": "/*\n  @title   PK 5\n  @by      Ido\n  @album   None\n  @license LGPL\n  @url     https://www.tiktok.com/@puddinggorrila\n*/\n\nsetcpm(180/4)\n\n$: stack(\n  note(`\n    F5   F5   F5   F5  Eb5  Eb5  Eb5  Eb5\n    Db5  Db5  Db5  Db5 C5   C5   C5   C5\n    B4   B4   B4   B4  A#4  A#4  A#4  A#4\n  `).slow(3),\n  note(`<Bb4 C5>!4`)\n).gain()\n\n$: stack(\n  note(`\n    E#4 - Bb - Db - C\n  `)\n)",
+        "created_at": 1764876834692,
+        "id": "VYwm49jZLLCa",
+        "collection": "user"
     }
 }
