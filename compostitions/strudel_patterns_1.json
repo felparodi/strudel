@@ -72,9 +72,21 @@
         "collection": "user"
     },
     "VYwm49jZLLCa": {
-        "code": "/*\n  @title   PK 5\n  @by      Ido\n  @album   None\n  @license LGPL\n  @url     https://www.tiktok.com/@puddinggorrila\n*/\n\nsetcpm(180/4)\n\n$: stack(\n  note(`\n    F5   F5   F5   F5  Eb5  Eb5  Eb5  Eb5\n    Db5  Db5  Db5  Db5 C5   C5   C5   C5\n    B4   B4   B4   B4  A#4  A#4  A#4  A#4\n  `).slow(3),\n  note(`<Bb4 C5>!4`)\n).gain()\n\n$: stack(\n  note(`\n    E#4 - Bb - Db - C\n  `)\n)",
+        "code": "/*\n  @title   PK 5\n  @by      Ido\n  @album   None\n  @license LGPL\n  @url     https://www.tiktok.com/@puddinggorrila\n*/\n\nsetcpm(180/4)\n\n$: stack(\n  note(`\n    [F5   F5   F5   F5  Eb5  Eb5  Eb5  Eb5] |\n    [Db5  Db5  Db5  Db5 C5   C5   C5   C5] |\n    [B4   B4   B4   B4  A#4  A#4  A#4  A#4]\n  `).beat(\"0,7,10\", 16),\n\n  note(`<Bb4 C5>!4`)\n).sound(\"sawtooth\").gain(1).lpf(500).att(\"<0 .1 >\").fm(slider(8.65,0,50))\n\n$: stack(\n  note(`\n    E#4 - Bb - Db - C\n  `)\n).sound(\"sawtooth\").bpa(\"<.5 .25>/4\")\n.fm(slider(1,0,50))\n.gain(.5)\n\n$: chooseCycles(\"bd\", \"hh\", \"sd\").s().fast(8)\n\n$: slowcat(\"e5\", \"b4\", [\"d5\", \"c5\"])",
         "created_at": 1764876834692,
         "id": "VYwm49jZLLCa",
+        "collection": "user"
+    },
+    "VZbS6wjvn4zS": {
+        "code": "/*\n  @title   Test\n  @by      Ido\n  @album   None\n  @license LGPL\n  @url     https://www.tiktok.com/@puddinggorrila\n*/\n\n/*\n  $: note(`\n  D5 F5 D5 A4  D5 F5 D5 A4\n  D5 F5 D5 F5  A5 G5 F5 -\n  D5 F5 D5 A4  D5 F5 D5 A4\n  A5 G5 F5 D5  C5 A4 A4 G4\n  A4 C5 A4 G4  F4 D4 F4 D4\n`).slow(10).attack(0.1).decay(0.5).sustain(0.1).release(0.5).scale(\"D:minor\").sound(\"ocarina_small\")\n*/\n\nsetcps(0.2)  // Tempo lento ~60 BPM\n$: stack(\n  // Melodía principal (triangle para sonar \"mágica\" y suave)\n  note(`[c4 d4 e4] f4 e4 [c4 d4] e4 [g4 a4 g4] e4 [c4 d4 e4 c4]`)\n  .sound(\"triangle\")\n  .legato(0.8)  // Notas conectadas, como una nana\n  .lpf(800)     // Filtro bajo para calidez\n  .gain(0.7)\n  .pan(sine.range(0.2, 0.8)).color(\"green\"),\n  \n  // Armonía sutil (square grave)\n  note(`c3 ~ e3 ~ g3 ~ e3 ~ c3 ~`)\n  .sound(\"square\")\n  .detune(-5)\n  .gain(0.3)\n  .lpf(400).color(\"blue\"),\n  \n  // Efecto ambiental (noise suave para \"viento\" o fondo)\n  s(\"~ ~ ~ ~ ~ ~ hh*2 ~\").gain(0.1).room(0.5)\n)\n\n.room(0.4).size(0.8)._spiral({ steady: .56, logSpiral: true, inset: 2 })",
+        "created_at": 1764945285338,
+        "id": "VZbS6wjvn4zS",
+        "collection": "user"
+    },
+    "ers6DcmgpTSu": {
+        "code": "/*\n  @title   Test\n  @by      Ido\n  @album   None\n  @license LGPL\n  @url     https://www.tiktok.com/@puddinggorrila\n*/\n\nconst a = \"<0 2 4 6 ~ 4 ~ 2 0!3 ~!5>*8\"\n  .superimpose(x => x.add(5))\n  .mask(\"<0@4 1@16>\")\n  .scale('C:minor').note()\n\n$: note(\"<c eb g bb>*8\")\n.s(\"sawtooth\").lpenv(2).lpq(8)\n.lpf(slider(100, 100, 2000, 1))\n\n$: a",
+        "created_at": 1765208951245,
+        "id": "ers6DcmgpTSu",
         "collection": "user"
     }
 }
